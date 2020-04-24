@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "watch": "nodemon -e '*' --watch assets --watch partials --watch posts --watch pages dist/index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "clean-css": "^4.2.3",
+    "handlebars": "^4.7.6",
+    "highlight.js": "^10.0.3",
+    "html-minifier": "^4.0.0",
+    "nodemon": "^2.0.3",
+    "terser": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.18",
+    "@types/clean-css": "^4.2.1",
+    "@types/highlight.js": "^9.12.4",
+    "@types/html-minifier": "^3.5.3",
+    "@types/react": "^16.9.35",
+    "@types/node": "^13.13.2",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^4.0.0-dev.20200606"
+  }
+}

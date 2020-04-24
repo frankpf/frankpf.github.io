@@ -1,0 +1,8 @@
+{{#each fontData as |font|}}
+@font-face {
+	font-family: '{{font.name}}';
+	font-weight: {{font.weight}};
+    src: {{{font.src}}};
+    font-display: swap;
+}
+{{/each}}

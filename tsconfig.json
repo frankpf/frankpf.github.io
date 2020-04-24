@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "esnext",
+		"strict": true,
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"jsx": "react",
+		"lib": ["es5", "es6"],
+		"paths": {
+			"*": ["node_modules/*", "src/_vendor/*"]
+		}
+	},
+	"include": ["src/**/*", "tests/**/*"]
+}

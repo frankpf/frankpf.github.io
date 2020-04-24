@@ -1,0 +1,25 @@
+<head>
+	<title>{{title}}</title>
+	<link rel=stylesheet href=/assets/fonts.css>
+	<style>
+		{{{ css }}}
+	</style>
+	<meta charset="utf-8" />
+	<script>
+		document.addEventListener('DOMContentLoaded', event => {
+			const headers = Array.from(document.querySelectorAll('h1'))
+			for (const header of headers) {
+				if (header.dataset.noanchor !== undefined || !header.hasAttribute('id')) {
+					continue
+				}
+				const link = document.createElement('a')
+				link.className = 'anchorlink'
+				link.href = `#${header.id}`
+				link.innerText = '#'
+				link.setAttribute('aria-hidden', true)
+				header.setAttribute('tabindex', "0")
+				header.appendChild(link)
+			}
+		})
+	</script>
+</head>
