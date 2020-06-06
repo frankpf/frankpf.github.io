@@ -1,0 +1,16 @@
+#!/bin/bash
+set -ex
+
+git checkout generator
+yarn run tsc && node dist/index.js
+cp -r build /tmp/site_build
+git checkout master
+rm -rf *
+git restore README.md CNAME
+mv /tmp/site_build/build/* .
+rm -rf /tmp/site_build
+git add .
+git commit -m "Publish new version"
+git push origin master
+git checkout generator
+
