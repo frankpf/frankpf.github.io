@@ -3,7 +3,7 @@
 	--code-fg: #282c34;
 } */
 :root {
-	--code-bg: #ddd;
+	--code-bg: #eed;
 	--code-fg: black;
 }
 body {
@@ -12,6 +12,8 @@ body {
 	line-height: 1.5;
 	width: 80%;
 	max-width: 1050px;
+	background-color: white;
+	color: #111;
 	margin: 0 auto;
 }
 
@@ -30,6 +32,7 @@ body:last-child { margin-bottom: 100px }
 .project header { margin: 0 }
 .project p { margin: 0 }
 .project h2 { font-weight: normal; margin: 0; }
+.project { margin-bottom: 30px }
 
 code:not(.sourceCode) {
 	padding: 1px 5px;
