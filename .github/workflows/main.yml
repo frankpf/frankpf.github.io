@@ -1,8 +1,8 @@
 name: Build page
 on: push
 jobs:
-        linux:
-                runs-on: ubuntu-latest
-                steps:
-                - name: Build page
-                  run: sh ./action.sh
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build page
+      run: sh ./action.sh
