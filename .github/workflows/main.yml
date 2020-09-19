@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build page
-      run: sh ./action.sh
+      run: sh .github/workflows/action.sh
