@@ -1,4 +1,7 @@
 build/
 node_modules/
-dist/
 drafts/
+
+!dist/
+dist/*
+!dist/actions
