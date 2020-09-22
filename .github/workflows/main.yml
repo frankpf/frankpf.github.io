@@ -10,3 +10,7 @@ jobs:
         echo "World"
         echo $(ls -la)
         echo $(pwd)
+        echo $(git status)
+        echo $(git log -5)
+        echo $(ls -la ..)
+      
