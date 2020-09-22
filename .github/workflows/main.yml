@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build page
-    - run: echo "hello"
-    - run: echo "world"
-    - run: echo $(ls -la)
+    - run: |
+        echo "Hello"
+        echo "World"
+        echo $(ls -la)
+        echo $(pwd)
