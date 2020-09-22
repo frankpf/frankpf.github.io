@@ -5,4 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build page
-      run: ./action.sh
+    - run: echo "hello"
+    - run: echo "world"
+    - run: echo $(ls -la)
