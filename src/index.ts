@@ -22,6 +22,7 @@ compileFontCss()
 registerPartials()
 genPosts(DATA)
 genIndex(DATA)
+fs.copyFileSync(`cv.pdf`, `build/cv.pdf`)
 
 function defaults(post?: PostData) {
 	return {
@@ -155,8 +156,7 @@ function cp(from: string, to: string): void {
 	if (fs.readdirSync(from).length == 0) {
 		return
 	}
-	execSync(`mkdir -p ${to}`)
-	execSync(`cp ${from}/* ${to}`)
+	execSync(`cp ${from} ${to}`)
 	console.log(`Copied ${from} to ${to}`)
 }
 
