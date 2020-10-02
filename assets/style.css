@@ -18,13 +18,14 @@ body {
 }
 
 .index {
-	margin-top: 100px;
+	margin-top: 50px;
 	font-size: 20px;
 }
 body:last-child { margin-bottom: 100px }
 
 .index h1 { font-size: 1.8em }
 .index h2 { font-size: 1.5em }
+.index p { margin: 0 }
 .projects { margin-top: 50px }
 .projects h2 { margin-bottom: 10px }
 .projects .link { font-size: 20px; }
