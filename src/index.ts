@@ -1,3 +1,4 @@
+require('source-map-support').install()
 import * as fs from 'fs'
 import * as path from 'path'
 import * as Handlebars from 'handlebars'
@@ -27,7 +28,7 @@ fs.copyFileSync(`cv.pdf`, `build/cv.pdf`)
 function defaults(post?: PostData) {
 	return {
 		css: genCss(),
-		title: post?.metadata.title ? `${post?.metadata.title} - Frank Filho` : 'Frank Filho'
+		title: post?.metadata.title ? `${post.metadata.title} - Frank Filho` : 'Frank Filho'
 	}
 }
 
@@ -78,7 +79,7 @@ function write(filename: string, content: string) {
 	const dir = path.parse(fullpath).dir
 	fs.mkdirSync(dir, {recursive: true})
 	console.log(`Writing to ${fullpath}`)
-	fs.writeFileSync(fullpath, optimizeHtml(content), {
+	fs.writeFileSync(fullpath, highlightHtml(content), {
 		encoding: 'utf8',
 		flag: 'w',
 	})
@@ -133,6 +134,7 @@ function compileOrgFile(path: string): OrgCompilationResult {
 	const separator = '\n---\n'
 	const idx = rawContent.indexOf(separator)
 	const rawMetadata = rawContent.slice(0, idx)
+	console.log('raw metadata', rawMetadata)
 	const metadata = parseMetadata(rawMetadata)
 	const content = rawContent.slice(idx + separator.length, rawContent.length)
 	const {stdout} = spawnSync('pandoc', ['--from=org', '--to=html'], {
@@ -197,8 +199,11 @@ function optimizeHtml(html: string) {
 
 function highlightHtml(html: string) {
 	const $ = cheerio.load(html)
-	$('code.sourceCode').each((i, el) => {
+	$('.sourceCode').each((i, el) => {
 		const content = $(el).text()!
+		console.log(content)
+		const highlighted = hljs.highlightAuto(content).value
+		console.log('---',highlighted)
 		$(el).empty()
 		$(el).append(hljs.highlightAuto(content).value)
 		$(el).addClass('hljs')

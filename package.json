@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch": "nodemon -e '*' --watch assets --watch partials --watch posts --watch pages dist/index.js"
+    "watch": "nodemon -e '*' --watch dist --watch assets --watch partials --watch posts --watch pages dist/index.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
@@ -9,6 +9,7 @@
     "highlight.js": "^10.0.3",
     "html-minifier": "^4.0.0",
     "nodemon": "^2.0.3",
+    "source-map-support": "^0.5.19",
     "terser": "^4.7.0"
   },
   "devDependencies": {

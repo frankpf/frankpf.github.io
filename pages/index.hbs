@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang=en>
-	{{>head }}
-	<script>console.log('hi')</script>
-	<body class=index>
-		<h1 data-noanchor>Hello there 👋 I'm Frank!</h1>
-		<p>I'm a Computer Science student at <a href="https://ufsc.br">UFSC</a>.</p>
-		<p>In the past, I've worked as a software developer intern at <a href="https://shopify.com">Shopify</a> and at <a href="https://getmore.com.br/">GETMORE</a>.</p>
-		{{#if posts.length}}
-		<p>Sometimes I write stuff here.</p>
-		{{/if}}
+{{>head }}
 
-		<section class=projects>
-			<h2>projects</h1>
+<body class=index>
+	<h1 data-noanchor>Hi there 👋 I'm Frank!</h1>
+	<p>I'm a Security Engineer at <a href="https://instacart.com">Instacart</a>.</p>
+	<p>In the past, I've worked as a software developer intern at <a href="https://shopify.com">Shopify</a> and at <a
+			href="https://getmore.com.br/">GETMORE</a>.</p>
+	{{#if posts.length}}
+	<p>Sometimes I write stuff here.</p>
+	{{/if}}
+
+	<section class=projects>
+		<h2>projects</h1>
 			<section class=project>
 				<header>
 					<h2>
@@ -19,8 +20,12 @@
 					</h2>
 					<span class="link"><a href="https://github.com/frankpf/kiwi">github.com/frankpf/kiwi</a></span>
 				</header>
-				<p>Kiwi is a small dynamically typed programming language.</p> <p>It's far from done, but it's already got variables, loops and functions! Check it out on the <a href="https://kiwi.frankpf.com">Kiwi playground</a>.</p>
-				<p>The interpreter uses a stack-based design and interprets the bytecode generated from the frontend.</p><p> Everything from the parser to the VM is hand-written.</p>
+				<p>Kiwi is a small dynamically typed programming language.</p>
+				<p>It's far from done, but it's already got variables, loops and functions! Check it out on the <a
+						href="https://kiwi.frankpf.com">Kiwi playground</a>.</p>
+				<p>The interpreter uses a stack-based design and interprets the bytecode generated from the frontend.
+				</p>
+				<p> Everything from the parser to the VM is hand-written.</p>
 			</section>
 			<section class=project>
 				<header>
@@ -29,7 +34,8 @@
 					</h2>
 					<span class="link"><a href="https://github.com/frankpf/undbg">github.com/frankpf/undbg</a></span>
 				</header>
-				<p>undbg is a debugger written in Go with support for reverse execution. While running a program, it saves all machine state, allowing the user to go back and debug in the past.</p>
+				<p>undbg is a debugger written in Go with support for reverse execution. While running a program, it
+					saves all machine state, allowing the user to go back and debug in the past.</p>
 			</section>
 			<section class=project>
 				<header>
@@ -38,14 +44,15 @@
 					</h2>
 					<span class="link"><a href="https://kiwi.frankpf.com">kiwi.frankpf.com</a></span>
 				</header>
-				<p>Kiwi barely works but it already has a playground :) The user input is executed in a docker sandbox.</p>
+				<p>Kiwi barely works but it already has a playground :) The user input is executed in a docker sandbox.
+				</p>
 				<p>You can read the code <a href="https://github.com/frankpf/kiwi-playground">here</a>.</p>
 			</section>
-		</section>
+	</section>
 
 
-		{{#if posts.length}}
-		<h2>log</h1>
+	{{#if posts.length}}
+	<h2>log</h1>
 		{{#each posts}}
 		<ul>
 			<li>
@@ -55,5 +62,6 @@
 		</ul>
 		{{/each}}
 		{{/if}}
-	</body>
+</body>
+
 </html>

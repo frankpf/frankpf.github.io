@@ -35,6 +35,11 @@ body:last-child { margin-bottom: 100px }
 .project h2 { font-weight: normal; margin: 0; }
 .project { margin-bottom: 30px }
 
+div.sourceCode {
+	font-family: monospace;
+	white-space: pre;
+}
+
 code:not(.sourceCode) {
 	padding: 1px 5px;
 	border-radius: 1px;
