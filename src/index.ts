@@ -19,7 +19,6 @@ const templates = {
 }
 
 fs.mkdirSync('build/assets', { recursive: true })
-compileFontCss()
 registerPartials()
 genPosts(DATA)
 genIndex(DATA)
@@ -28,7 +27,7 @@ fs.copyFileSync(`cv.pdf`, `build/cv.pdf`)
 function defaults(post?: PostData) {
 	return {
 		css: genCss(),
-		title: post?.metadata.title ? `${post.metadata.title} - Frank Filho` : 'Frank Filho'
+		title: post?.metadata.title ? `${post.metadata.title} - Frank Filho` : 'frank filho'
 	}
 }
 
@@ -59,8 +58,7 @@ function genFontData() {
 }
 
 function genCss() {
-	return fs.readFileSync('assets/style.css') + '\n' +
-		fs.readFileSync('assets/atom-one-dark.css')
+	return fs.readFileSync('assets/style.css')
 }
 
 function genIndex(posts: PostData[]) {
@@ -201,9 +199,7 @@ function highlightHtml(html: string) {
 	const $ = cheerio.load(html)
 	$('.sourceCode').each((i, el) => {
 		const content = $(el).text()!
-		console.log(content)
 		const highlighted = hljs.highlightAuto(content).value
-		console.log('---',highlighted)
 		$(el).empty()
 		$(el).append(hljs.highlightAuto(content).value)
 		$(el).addClass('hljs')

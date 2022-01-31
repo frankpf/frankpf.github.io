@@ -2,26 +2,11 @@
 	<title>{{title}}</title>
 	<link rel=stylesheet href=/assets/fonts.css>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="my terrible handrolled static site generator lol https://github.com/frankpf/frankpf.github.io"
 	<style>
 		{{{ css }}}
 	</style>
 	<meta charset="utf-8" />
-	<noscript><img src="https://skynet.frankpf.com/ingress/54a2646c-d869-4961-a002-afb0ace4ac7d/pixel.gif"></noscript> <script src="https://skynet.frankpf.com/ingress/54a2646c-d869-4961-a002-afb0ace4ac7d/script.js"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', event => {
-			const headers = Array.from(document.querySelectorAll('h1'))
-			for (const header of headers) {
-				if (header.dataset.noanchor !== undefined || !header.hasAttribute('id')) {
-					continue
-				}
-				const link = document.createElement('a')
-				link.className = 'anchorlink'
-				link.href = `#${header.id}`
-				link.innerText = '#'
-				link.setAttribute('aria-hidden', true)
-				header.setAttribute('tabindex', "0")
-				header.appendChild(link)
-			}
-		})
-	</script>
+	<noscript><img src="https://skynet.frankpf.com/ingress/54a2646c-d869-4961-a002-afb0ace4ac7d/pixel.gif"></noscript>
+	<script src="https://skynet.frankpf.com/ingress/54a2646c-d869-4961-a002-afb0ace4ac7d/script.js"></script>
 </head>
